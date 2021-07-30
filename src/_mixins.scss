@@ -1,0 +1,27 @@
+@mixin rubold {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@mixin rulight {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.125rem;
+}
+
+@mixin rumedium {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+@mixin dm {
+  font-family: DM Serif Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+}

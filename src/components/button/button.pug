@@ -1,0 +1,9 @@
+mixin headerRedBtn(text, link)
+  a(href= link).header__navigation__links__item.red-button= text
+
+mixin redBtn(text, link)
+  a(href= link).red-button= text
+
+mixin redBtnArrow(text, link)
+  a(href= link).red-button.red-button__arrow= text
+    img(src="/src/img/arrow.svg", alt="arrow")

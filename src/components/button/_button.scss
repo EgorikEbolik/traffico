@@ -1,0 +1,14 @@
+.red-button {
+  background-color: $red;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.31rem;
+  color: #fff;
+  @include rubold;
+  text-transform: uppercase;
+  
+  &__arrow {
+    img{
+      margin-left: 1.5rem;
+    }
+  }
+}

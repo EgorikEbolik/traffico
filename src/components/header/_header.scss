@@ -1,0 +1,97 @@
+header {
+  .header__img {
+    background: url("/src/img/Scene2.png") no-repeat;
+    background-position: center;
+    height: 150vh;
+    width: 85%;
+    position: relative;
+    background-size: cover;
+
+
+
+
+    .header__navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 3.75rem;
+
+
+      &__links {
+        flex-grow: 2;
+        display: flex;
+        align-items: center;
+        margin-right: -40%;
+
+        &__item {
+          margin-left: 9%;
+          color: #fff;
+          @include rubold;
+          text-transform: uppercase;
+        }
+      }
+
+    }
+
+    .page-slogan {
+      @include dm;
+      color: #fff;
+      font-size: 6.25rem;
+      text-align: left;
+      max-width: 46.31rem;
+      line-height: 100%;
+      margin: 0;
+      margin-top: 5.62rem;
+
+      @media (max-width:800px) {
+        & {
+          font-size: 4rem;
+          margin-top: 3.78rem;
+        }
+      }
+
+      @media (max-width:570px) {
+        & {
+          font-size: 3.5rem;
+          margin-top: 2rem;
+
+        }
+      }
+
+      @media (max-width:320px) {
+        & {
+          font-size: 3rem;
+          margin-top: 2rem;
+
+        }
+      }
+
+    }
+
+    .red-button__arrow {
+      display: inline-block;
+      margin-top: 4.65%;
+
+
+      @media (max-width:320px) {
+        & {
+          text-align: center
+        }
+      }
+    }
+
+    @media screen and (max-width:1000px) {
+      & {
+        width: 100%;
+        background-position: right;
+
+        .header__navigation {
+
+          &__links {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

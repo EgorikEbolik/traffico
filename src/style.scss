@@ -1,0 +1,54 @@
+.adaptive-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@import "mixins";
+@import "variables";
+@import "components/logo/logo";
+@import "components/button/button";
+@import "components/header/header";
+@import "components/about-us/about-us";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+h2 {
+  @include rubold;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: $red;
+  text-transform: uppercase;
+  margin: 0;
+
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 600px) {
+  html {
+   font-size: 1.2rem;
+  }
+  
+}
+
+

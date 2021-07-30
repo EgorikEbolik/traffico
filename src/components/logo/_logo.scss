@@ -1,0 +1,12 @@
+.header__navigation__logo {
+  flex-grow: 2;
+  display: flex;
+
+  &__text {
+    align-self: center;
+    margin-left: 1.75rem;
+    color: #fff;
+    @include dm;
+  }
+
+}
