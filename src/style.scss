@@ -9,7 +9,7 @@
 @import "components/logo/logo";
 @import "components/button/button";
 @import "components/header/header";
-@import "components/about-us/about-us";
+@import "components/information/information";
 
 html {
   font-size: 16px;
@@ -21,6 +21,7 @@ body {
   max-width: 100%;
   margin: 0;
   padding: 0;
+  background: rgba(254, 248, 245, 1);
 }
 
 a {
@@ -42,6 +43,8 @@ h2 {
   max-width: 80%;
   margin: 0 auto;
 }
+
+.dflex{display: flex;}
 
 
 @media screen and (max-width: 600px) {

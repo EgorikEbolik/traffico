@@ -1,0 +1,87 @@
+.information {
+
+  &__text-content {
+    width: 37.5%;
+
+    h2 {
+      margin-bottom: 8%;
+    }
+
+    &__description {
+      @include rulight;
+      color: $black;
+      max-width: 80%;
+      line-height: 2.5rem;
+    }
+  }
+
+  &__about-us {
+    margin-top: 30%;
+
+    .information__text-content {
+
+      .information__about-us__text-content__question {
+        @include rumedium;
+        color: $black;
+        line-height: 2.25rem;
+        padding: 1.875rem 3.437rem;
+        margin-top: 12.2%;
+        background: $lightPink;
+        border-radius: 0.3rem 0 0 0.3rem;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+          position: absolute;
+          left: 0;
+          top: 0;
+          content: "";
+          width: 0.625rem;
+          height: 100%;
+          background: $red;
+        }
+      }
+    }
+
+    .img-wrapper {
+      margin-left: 5%;
+
+
+    }
+
+
+
+  }
+
+  &__how-to-apply {
+    flex-direction: row-reverse;
+    margin-top: 10rem;
+
+    &__img-wrapper {
+      margin-right: 5%;
+    }
+
+  }
+
+  @media screen and (max-width:850px) {
+
+    &>div {
+      flex-direction: column !important;
+    }
+
+    &__text-content {
+      margin-bottom: 7%;
+      text-align: center;
+      width: 100%;
+
+
+      &__description {
+        max-width: 100%;
+      }
+
+      .information__about-us__text-content__question {
+        padding: 1.875rem;
+      }
+    }
+  }
+}

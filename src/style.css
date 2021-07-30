@@ -138,36 +138,33 @@ header .header__img .red-button__arrow {
     background-position: right;
   }
   header .header__img .header__navigation__links {
-    margin-right: 0;
+    margin-right: 5%;
   }
 }
 
-.about-us {
-  margin-top: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.about-us .text-content {
-  text-align: left;
+.information__text-content {
   width: 37.5%;
 }
 
-.about-us .text-content h2 {
-  margin-bottom: 4.3%;
+.information__text-content h2 {
+  margin-bottom: 8%;
 }
 
-.about-us .text-content__description {
+.information__text-content__description {
   font-family: Rubik;
   font-style: normal;
   font-weight: 300;
   font-size: 1.125rem;
   color: #402b2b;
   max-width: 80%;
+  line-height: 2.5rem;
 }
 
-.about-us .text-content__question {
+.information__about-us {
+  margin-top: 30%;
+}
+
+.information__about-us .information__text-content .information__about-us__text-content__question {
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
@@ -182,7 +179,7 @@ header .header__img .red-button__arrow {
   overflow: hidden;
 }
 
-.about-us .text-content__question::after {
+.information__about-us .information__text-content .information__about-us__text-content__question::after {
   position: absolute;
   left: 0;
   top: 0;
@@ -192,27 +189,38 @@ header .header__img .red-button__arrow {
   background: #ed4d47;
 }
 
-.about-us .block-img {
-  vertical-align: top;
+.information__about-us .img-wrapper {
   margin-left: 5%;
 }
 
+.information__how-to-apply {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-top: 10rem;
+}
+
+.information__how-to-apply__img-wrapper {
+  margin-right: 5%;
+}
+
 @media screen and (max-width: 850px) {
-  .about-us {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .information > div {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
-  .about-us .text-content {
-    margin-bottom: 4.3%;
+  .information__text-content {
+    margin-bottom: 7%;
     text-align: center;
     width: 100%;
   }
-  .about-us .text-content__description {
+  .information__text-content__description {
     max-width: 100%;
   }
-  .about-us .text-content__question {
+  .information__text-content .information__about-us__text-content__question {
     padding: 1.875rem;
   }
 }
@@ -227,6 +235,7 @@ body {
   max-width: 100%;
   margin: 0;
   padding: 0;
+  background: #fef8f5;
 }
 
 a {
@@ -249,6 +258,12 @@ h2 {
 .container {
   max-width: 80%;
   margin: 0 auto;
+}
+
+.dflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (max-width: 600px) {
