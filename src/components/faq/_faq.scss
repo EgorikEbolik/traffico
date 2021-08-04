@@ -1,0 +1,120 @@
+.faq {
+  position: relative;
+  margin-top: 13.75rem;
+
+  & * {
+    position: relative;
+  }
+
+  &__fixed-background {
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    background: $pink;
+    border-radius: 12.5rem 0 0 0;
+    right: -20%;
+    top: -10%;
+  }
+
+  &__header {
+
+    &__text {
+      margin-top: 8%;
+      max-width: 45%;
+
+      &__subtitle {
+        @include dm;
+        color: $black;
+        width: fit-content;
+        max-width: 80%;
+        font-size: 3rem;
+        line-height: 4.2rem;
+        margin-top: 2.9%;
+      }
+    }
+
+    .img-wrapper {
+      margin-left: 5%;
+    }
+
+    @media screen and (max-width:1080px) {
+      & {
+        flex-direction: column;
+        gap: 50px;
+
+        &__text {
+          max-width: 100%;
+          text-align: center;
+          align-self: flex-start;
+
+          &__subtitle {
+            max-width: 100%;
+            margin: 3% 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__questions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    align-self: center;
+
+    &__question {
+      background: #fff;
+      height: 5.625rem;
+      box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+      border-radius: 0.625rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0.125rem;
+        height: 1.25rem;
+        background-color: $red;
+        right: 2.187rem;
+        transition: .4s ease-out;
+      }
+
+      &::after {
+        transform: rotate(90deg)
+      }
+
+      &:hover:before {
+        transform: rotate(270deg);
+      }
+
+      &__text {
+        @include rumedium;
+        color: $black;
+        margin-left: 2.187rem;
+        font-size: 1.125rem;
+        line-height: 1.875rem;
+        max-width: 65%;
+      }
+
+
+    }
+
+    @media screen and (max-width: 1080px) {
+      & {
+        grid-template-columns: 1fr;
+
+        &__question {
+          height: auto;
+
+          &__text {
+            margin: 1rem 0 1rem 1rem, ;
+          }
+        }
+      }
+    }
+  }
+}

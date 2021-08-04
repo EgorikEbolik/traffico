@@ -2,6 +2,7 @@
   display: block;
   max-width: 100%;
   height: auto;
+  margin: 0 auto  ;
 }
 
 @import "mixins";
@@ -10,6 +11,7 @@
 @import "components/button/button";
 @import "components/header/header";
 @import "components/information/information";
+@import "components/faq/faq";
 
 html {
   font-size: 16px;
@@ -36,8 +38,10 @@ h2 {
   color: $red;
   text-transform: uppercase;
   margin: 0;
+  letter-spacing: .1rem;
 
 }
+
 
 .container {
   max-width: 80%;
@@ -47,7 +51,7 @@ h2 {
 .dflex{display: flex;}
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px), (min-width: 2048px) {
   html {
    font-size: 1.2rem;
   }
