@@ -1,0 +1,27 @@
+footer.footer 
+  .container
+    .footer__top.dflex
+      .footer__top__text We provide traffic management consultants so you get started quickly, contact us for a quote today!
+      form(action='#' method='method').footer__top__form
+        .footer__top__form__group
+          label(for='name') Name
+          input.footer__top__form__group__input(type='text', name='name' placeholder='Your name' autofocus=true)
+        .footer__top__form__group
+          label(for='email') Email address
+          input.footer__top__form__group__input(type='email', name='email' placeholder='Your email address')
+        button.red-button.red-button__arrow.footer__top__form__btn(type='submit') Get started
+          img(src="/src/img/arrow.svg", alt="button arrow")
+    .footer__bottom.dflex
+      +logo
+      .footer__bottom__links.dflex
+        a(href="#about").footer__bottom__links__link ABOUT 
+        a(href="#howto").footer__bottom__links__link HOW TO 
+        a(href="#faq").footer__bottom__links__link FAQS
+  .footer__contacts__wrapper
+    .container
+      .footer__contacts.dflex
+        .footer__contacts__copyright Copyright @ 2021
+        .footer__contacts__links
+          i(class="fab fa-facebook-f footer__contacts__links__item")
+          i(class="fab fa-twitter footer__contacts__links__item")
+          i(class="fab fa-instagram footer__contacts__links__item")

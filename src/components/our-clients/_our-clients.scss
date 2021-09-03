@@ -1,0 +1,144 @@
+.clients {
+  margin-top: 11.06rem;
+  margin-bottom: 21.06rem;
+
+
+
+  &__header {
+    align-items: center;
+    justify-content: space-between;
+
+    &__arrows {
+
+      &__arrow {
+        cursor: pointer;
+
+        &:first-child {
+          transform: rotate(180deg);
+          margin-right: 1.9rem;
+        }
+
+        &:hover path {
+          opacity: 1;
+        }
+
+        path {
+          fill: $red;
+          opacity: .5;
+          transition: .3s ease-out;
+        }
+      }
+
+    }
+  }
+
+  &__content {
+    margin-top: 2.75rem;
+
+    &__subtitle {
+      flex: 0 0 25%;
+    }
+
+    &__clients-cards {
+      gap: 1.25rem;
+
+      &__card {
+        flex-shrink: 0;
+        max-width: 28%;
+        height: 93%;
+        background: #fff;
+        box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+        border-radius: 10px;
+        flex-direction: column;
+        padding: 3.75rem 3.25rem 2.5rem 3rem;
+
+        &__text {
+          @include rulight;
+          font-size: 1rem;
+          line-height: 1.875rem;
+          color: $black;
+          flex-grow: 2;
+        }
+
+        &__client {
+          align-items: flex-end;
+          flex-grow: 0.5;
+
+          &__name {
+            @include rumedium;
+            margin-left: 6.25%;
+            margin-bottom: 5%;
+            line-height: 1.875rem;
+            font-size: 1rem;
+            text-align: center;
+
+          }
+
+          &__avatar {
+            margin: 0;
+            border-radius: 50%;
+          }
+
+
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:1080px) {
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 5rem;
+
+    &__header {
+      flex-direction: column;
+
+      &__arrows {
+        position: absolute;
+        top: 105%
+      }
+    }
+
+    &__content {
+      flex-direction: column;
+
+
+      &__subtitle {
+        text-align: center;
+      }
+
+      &__clients-cards {
+        margin-top: 2.75rem;
+
+        &__card {
+          max-width: 65%;
+          height: auto;
+
+          &__client {
+
+            &__name {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:430px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width:1000px) and (max-width:1080px) {
+    .clients__content__clients-cards__card__client {
+      margin-top: 4%;
+    }
+  }
+
+  @media screen and (max-width:320px) {
+    .clients__content__clients-cards__card {
+      max-width: 60%;
+      transform: translateX(-8px);
+    }
+  }
+}

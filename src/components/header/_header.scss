@@ -28,6 +28,19 @@ header {
           color: #fff;
           @include rubold;
           text-transform: uppercase;
+          border-bottom: 3px solid transparent;
+          transition: .3s ease-out;
+          padding-bottom: 5px;
+          &:hover {
+            border-color: $red
+          }
+
+          &:last-child {
+            border:none;
+            &:hover {
+              transform: scale(1.1)
+            }
+          }
         }
       }
 

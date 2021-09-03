@@ -1,0 +1,23 @@
+mixin review(text,img,name)
+  .clients__content__clients-cards__card.dflex
+    .clients__content__clients-cards__card__text= text
+    .clients__content__clients-cards__card__client.dflex
+      img(src= `/src/img/${img}.png`, alt="img").clients__content__clients-cards__card__client__avatar.adaptive-img
+      .clients__content__clients-cards__card__client__name= name
+
+.container  
+  .clients
+    .clients__header.dflex
+      h2 about us
+      .clients__header__arrows 
+        svg(width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg").clients__header__arrows__arrow
+          path(d="M23.8885 12.355L29.5 6.17749L28.5 5.07664V5.0039H28.4339L23.8885 0L22.4086 1.3464L25.731 5.0039L0 5.0039L0 7.0039L26.0464 7.0039L22.4086 11.0086L23.8885 12.355Z")
+        svg(width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg").clients__header__arrows__arrow
+          path(d="M23.8885 12.355L29.5 6.17749L28.5 5.07664V5.0039H28.4339L23.8885 0L22.4086 1.3464L25.731 5.0039L0 5.0039L0 7.0039L26.0464 7.0039L22.4086 11.0086L23.8885 12.355Z")
+    .clients__content.dflex
+      .clients__content__subtitle.subtitle Out Awesome Clients
+      .clients__content__clients-cards.dflex
+        +review("Yes, you will need to have the land owner sign the permit application as the Permittee, and you sign the permit as the Applicant or Agent for the Permittee.", "avatar1", "Isak Pettersson")
+        +review("From most barricade or traffic control companies located in the phone book. They employ certified Traffic Control Supervisors (TCS) who can generate and certify the traffic control plan.", "avatar2", "Simon Sandberg")
+        +review("An A-Line, or access restriction deed is a property right that has been obtained by CDOT for the sole purpose of prohibiting direct", "avatar4", "Micah Bell")
+          

@@ -1,18 +1,26 @@
+mixin gridItem(text, answer)
+  .faq__questions-grid__item 
+    .faq__questions-grid__item__question        
+      .faq__questions-grid__item__question__text= text
+    .faq__questions-grid__item__answer= answer
+
 .container 
-  .faq 
+  .faq#faq 
     .faq__fixed-background
     .faq__header.dflex
       .faq__header__text
         h2 faq
-        .faq__header__text__subtitle Questions and Answers on Professional Traffic Permits:
+        .faq__header__text__subtitle.subtitle Questions and Answers on Professional Traffic Permits:
       .img-wrapper
         img(src="/src/img/faq.png", alt="faq").adaptive-img
     .faq__questions-grid
-      .faq__questions-grid__question 
-        .faq__questions-grid__question__text What is a professional traffic permit?
-      .faq__questions-grid__question
-        .faq__questions-grid__question__text When is a professional traffic permit needed?
-      .faq__questions-grid__question
-        .faq__questions-grid__question__text  How to check the traffic condition?
-      .faq__questions-grid__question
-        .faq__questions-grid__question__text  Are there differences between a traffic permit and a professional traffic permit?
+      +gridItem("What is a professional traffic permit?", "Traffic permits are a requirement for conducting professional traffic.")
+      +gridItem("When is a professional traffic permit needed?", "Traffic permits are a requirement for conducting professional traffic.")
+      +gridItem("How to check the traffic condition?", "Traffic permits are a requirement for conducting professional traffic.")
+      +gridItem("Where to look for a traffic permit?", "Traffic permits are a requirement for conducting professional traffic.")
+      +gridItem("Are there differences between a traffic permit and a professional traffic permit?", "Traffic permits are a requirement for conducting professional traffic.")
+      +gridItem("How much does a commercial traffic permit cost for goods?", "Traffic permits are a requirement for conducting professional traffic.")
+      +gridItem("What are the requirements for a professional traffic permit?", "Traffic permits are a requirement for conducting professional traffic.")
+      +gridItem("How to plug in for the traffic permit test?", "Traffic permits are a requirement for conducting professional traffic.")
+      +gridItem("Are there professional traffic permit training courses at a distance?", "Traffic permits are a requirement for conducting professional traffic.")
+      +gridItem("How is the sample for a professional traffic permit booked?", "Traffic permits are a requirement for conducting professional traffic.")

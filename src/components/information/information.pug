@@ -1,7 +1,7 @@
 //- первое - имя класса для блока, второе - заголовок блока, третье - описание (спасибо, Кэп), четвёртое - название файла картинки (!!!обязательно PNG!!!)
-//- четвёртое - если хочешь добавить вопрос с красным бэкграундом, как в первом блоке, пишешь ещё два аргумента: первый - "yes", второй - текст вопроса 
-mixin infoBlock(name, title, description, img,isQuest, questText) 
-  div(class=`information__${name} dflex`)
+//- пятое - Id если шестое и седьмое - хочешь добавить вопрос с красным бэкграундом, как в первом блоке? пиши ещё два аргумента: первый - "yes", второе - текст вопроса
+mixin infoBlock(name, title, description, img, id, isQuest, questText) 
+  div(class=`information__${name} dflex` id=`${id}`)
     .information__text-content
       h2= title
       .information__text-content__description= description
@@ -13,9 +13,9 @@ mixin infoBlock(name, title, description, img,isQuest, questText)
 
 .container
   .information
-    +infoBlock("about-us", "ABOUT US", "The occupational traffic permit is one of the most important things in the company when carrying out freight transport.  In fact, it is a prerequisite for doing business traffic at all.", "about" ,"yes", "How do you do when you need to obtain a commercial traffic permit for freight transport to your business?")
+    +infoBlock("about-us", "ABOUT US", "The occupational traffic permit is one of the most important things in the company when carrying out freight transport.  In fact, it is a prerequisite for doing business traffic at all.", "about", "about", "yes", "How do you do when you need to obtain a commercial traffic permit for freight transport to your business?")
 
-    +infoBlock("how-to-apply", "HOW TO APPLY", "When applying for a traffic permit, there are certain requirements that you must meet that are included in the examination: requirements for professional knowledge, solid establishment, good reputation and financial resources. Important to remember is to confirm your application for a traffic permit by the company's company signer or CEO.", "how-apply")
+    +infoBlock("how-to-apply", "HOW TO APPLY", "When applying for a traffic permit, there are certain requirements that you must meet that are included in the examination: requirements for professional knowledge, solid establishment, good reputation and financial resources. Important to remember is to confirm your application for a traffic permit by the company's company signer or CEO.", "how-apply", "howto")
 
     
     

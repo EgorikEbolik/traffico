@@ -2,7 +2,7 @@
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0 auto  ;
+  margin: 0 auto;
 }
 
 @import "mixins";
@@ -12,14 +12,19 @@
 @import "components/header/header";
 @import "components/information/information";
 @import "components/faq/faq";
+@import "components/our-clients/our-clients";
+@import "components/footer/footer";
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
+  
 }
 
 body {
   overflow-x: hidden;
   width: 100%;
+  height: 100%;
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -29,6 +34,15 @@ body {
 a {
   text-decoration: none;
   color: inherit
+}
+
+svg {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  appearance: none;
 }
 
 h2 {
@@ -42,20 +56,38 @@ h2 {
 
 }
 
+label, input {
+  display: block;
+}
 
 .container {
   max-width: 80%;
   margin: 0 auto;
 }
 
-.dflex{display: flex;}
+.dflex {
+  display: flex;
+}
 
-
-@media screen and (max-width: 1000px), (min-width: 2048px) {
-  html {
-   font-size: 1.2rem;
-  }
+.answer-active {
+  padding: 2.5rem 2.1875rem 3.75rem;
+  opacity: 1;
+  height: auto;
   
 }
 
+.subtitle {
+  @include dm;
+  color: $black;
+  font-size: 3rem;
+  line-height: 4.2rem;
+}
 
+
+@media screen and (max-width: 1000px),
+(min-width: 2048px) {
+  html {
+    font-size: 1.2rem;
+  }
+
+}

@@ -1,14 +1,20 @@
 .red-button {
   background-color: $red;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 1.5rem !important;
   border-radius: 0.31rem;
   color: #fff;
   @include rubold;
   text-transform: uppercase;
+  overflow: hidden;
   
   &__arrow {
     img{
       margin-left: 1.5rem;
+      transition: .3s ease-in;
+    }
+
+    &:hover img {
+      transform: translateX(200%) scale(0);
     }
   }
 }
