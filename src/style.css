@@ -51,7 +51,7 @@
 }
 
 header .header__img {
-  background: url("/traffico/src/img/Scene2.png") no-repeat;
+  background: url("/src/img/Scene2.png") no-repeat;
   background-position: center;
   height: 150vh;
   width: 85%;
@@ -580,7 +580,7 @@ header .header__img .red-button__arrow {
 }
 
 .footer {
-  background-image: url(/traffico/src/img/footer-bg.png);
+  background-image: url(/src/img/footer-bg.png);
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 90%;
